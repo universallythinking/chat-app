@@ -7,9 +7,9 @@ const path = require("path");
 const PORT = process.env.PORT || 8080;
 
 // REMOVE COMMENTS BELOW WHEN READY TO DEPLOY
- app.use(express.static(path.join(__dirname, "client/build")));
+ app.use(express.static(path.join(__dirname, "client/public")));
  app.get("/*", function (req, res) {
-   res.sendFile(path.join(__dirname, "client/build", "index.html"));
+   res.sendFile(path.join(__dirname, "client/public", "index.html"));
  });
 
 let usersConnected = new Map();
